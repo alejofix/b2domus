@@ -6,7 +6,9 @@ require_once 'includes/header.php';
 
 <!-- Hero -->
 <section class="hero" id="hero">
-    <div class="hero-bg img-placeholder" data-label="Hero Background"></div>
+    <div class="hero-bg">
+        <img src="assets/images/principal.jpeg" alt="B2 Domus - Proyecto principal">
+    </div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
         <span class="hero-badge"><i class="fas fa-trophy me-1"></i> Mobiliario a Medida</span>

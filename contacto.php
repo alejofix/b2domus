@@ -142,4 +142,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </section>
 
+<!-- Coverage Map -->
+<section class="section pt-0">
+    <div class="container">
+        <div class="text-center reveal">
+            <div class="section-divider"></div>
+            <h2 class="section-title">Zona de Cobertura</h2>
+            <p class="section-subtitle">Atendemos Bogotá, Funza y alrededores con puntualidad y calidad.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 reveal">
+                <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(29,55,46,0.08);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15905.635!2d-74.1256023!3d4.7147823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f835648501d2d%3A0xdc0d5907410efaec!2sCra.%20112A%20%2373A-80%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1"
+                        width="100%" height="400" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+            <div class="col-lg-8 reveal">
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 p-3" style="background: var(--white); border-radius: 16px; box-shadow: 0 5px 20px rgba(29,55,46,0.05);">
+                    <span><i class="fas fa-map-pin" style="color: var(--gold);"></i> <strong>Cra. 112A #73A-80, Bogotá</strong></span>
+                    <span class="opacity-25 d-none d-sm-inline">|</span>
+                    <span><i class="fas fa-map-marked-alt" style="color: var(--gold);"></i> Cobertura: Bogotá, Funza y alrededores</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php require_once 'includes/footer.php'; ?>
