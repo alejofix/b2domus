@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitácora Técnica - B2 Domus</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a2e; color: #e0e0e0; line-height: 1.7; margin: 0; padding: 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { color: #DDBC6B; border-bottom: 3px solid #DDBC6B; padding-bottom: 0.5rem; font-size: 2.2rem; }
+        h2 { color: #DDBC6B; margin-top: 2.5rem; border-left: 4px solid #DDBC6B; padding-left: 1rem; }
+        h3 { color: #F5EEDC; margin-top: 1.5rem; }
+        code { background: #16213e; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; color: #7ec8e3; }
+        pre { background: #16213e; padding: 1rem; border-radius: 8px; overflow-x: auto; border: 1px solid #2a2a4a; font-size: 0.85rem; }
+        .tag { display: inline-block; background: #DDBC6B; color: #1D372E; padding: 0.2rem 0.8rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; margin: 0.2rem; }
+        .tag-blue { background: #3F5A4E; color: #F5EEDC; }
+        .info-box { background: #16213e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
+        .info-box strong { color: #DDBC6B; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+        th, td { border: 1px solid #2a2a4a; padding: 0.6rem 1rem; text-align: left; }
+        th { background: #16213e; color: #DDBC6B; font-weight: 600; }
+        tr:nth-child(even) { background: rgba(255,255,255,0.03); }
+        .file-tree { font-family: 'Consolas', monospace; line-height: 1.9; }
+        .file-tree .dir { color: #7ec8e3; }
+        .file-tree .file { color: #a8e6cf; }
+        .file-tree .indent { padding-left: 1.5rem; }
+        hr { border: none; border-top: 1px solid #2a2a4a; margin: 2rem 0; }
+        ul, ol { padding-left: 1.5rem; }
+        li { margin-bottom: 0.3rem; }
+        .color-swatch { display: inline-block; width: 18px; height: 18px; border-radius: 4px; vertical-align: middle; margin-right: 0.3rem; border: 1px solid rgba(255,255,255,0.2); }
+        a { color: #7ec8e3; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<h1>📋 Bitácora Técnica — B2 Domus</h1>
+<p><strong>Versión:</strong> 1.0 &nbsp;|&nbsp; <strong>Fecha:</strong> Junio 2026 &nbsp;|&nbsp; <strong>Cliente:</strong> B2 Domus (Sergio Bolaños / Fabián Bolaños)</p>
+
+<hr>
+
+<h2>1. Objetivo del Proyecto</h2>
+<p>Sitio web corporativo de <strong>B2 Domus</strong>, empresa colombiana especializada en diseño, fabricación e instalación de mobiliario a medida en Bogotá, Funza y alrededores.</p>
+
+<div class="info-box">
+    <strong>🎯 Propósito principal:</strong> Escaparate comercial para captar clientes interesados en mobiliario personalizado. No se muestran precios; todo lleva a cotización vía WhatsApp o formulario de contacto.<br><br>
+    <strong>🤖 Asistente virtual:</strong> "Misi" — gatica IA con respuestas automáticas (OpenAI o fallback predefinido).<br><br>
+    <strong>🎨 Inspiración de diseño:</strong> <a href="https://oblikuall.com/" target="_blank">oblikuall.com</a> — estética moderna, minimalista, arquitectónica, premium.
+</div>
+
+<hr>
+
+<h2>2. Stack Tecnológico</h2>
+
+<table>
+    <tr><th>Tecnología</th><th>Versión</th><th>Uso</th></tr>
+    <tr><td>PHP</td><td>8.x</td><td>Lógica del servidor, includes, formulario, API Misi</td></tr>
+    <tr><td>Bootstrap</td><td>5.3.3</td><td>Framework CSS responsive, navbar, grid, formularios</td></tr>
+    <tr><td>GSAP</td><td>3.12.5</td><td>Animaciones avanzadas (hero, scroll reveal, counters, stagger)</td></tr>
+    <tr><td>Font Awesome</td><td>6.5.1</td><td>Iconografía (servicios, redes, CTA)</td></tr>
+    <tr><td>Google Fonts</td><td>Inter</td><td>Tipografía principal (300–800 weight)</td></tr>
+    <tr><td>OpenAI API</td><td>—</td><td>Opcional — respuestas inteligentes para Misi</td></tr>
+    <tr><td>ImageMagick</td><td>6.9.12</td><td>Procesamiento de imágenes (logo, redimensiones)</td></tr>
+</table>
+
+<hr>
+
+<h2>3. Estructura de Archivos</h2>
+
+<div class="file-tree">
+<span class="dir">b2domus/</span><br>
+│<br>
+├── <span class="file">index.php</span> <span style="color:#666;">— Página de inicio (hero, servicios preview, proyectos destacados, proceso, CTA)</span><br>
+├── <span class="file">servicios.php</span> <span style="color:#666;">— Listado detallado de 5 servicios con imágenes</span><br>
+├── <span class="file">portafolio.php</span> <span style="color:#666;">— Galería masonry de proyectos realizados</span><br>
+├── <span class="file">proceso.php</span> <span style="color:#666;">— Timeline animado de 5 pasos + estadísticas</span><br>
+├── <span class="file">nosotros.php</span> <span style="color:#666;">— Historia, pilares, valores de la empresa</span><br>
+├── <span class="file">contacto.php</span> <span style="color:#666;">— Formulario + info + enlaces WhatsApp</span><br>
+├── <span class="file">gracias.php</span> <span style="color:#666;">— Página post-envío de formulario</span><br>
+│<br>
+├── <span class="dir">api/</span><br>
+│&nbsp;&nbsp; └── <span class="file">misi.php</span> <span style="color:#666;">— Endpoint OpenAI para el chatbot (con fallback)</span><br>
+│<br>
+├── <span class="dir">includes/</span><br>
+│&nbsp;&nbsp; ├── <span class="file">config.php</span> <span style="color:#666;">— Constantes, paleta de colores, datos de servicios/portafolio/proceso</span><br>
+│&nbsp;&nbsp; ├── <span class="file">header.php</span> <span style="color:#666;">— Navbar sticky + etiquetas &lt;head&gt;</span><br>
+│&nbsp;&nbsp; └── <span class="file">footer.php</span> <span style="color:#666;">— Footer completo + WhatsApp float + Misi chatbot + scripts</span><br>
+│<br>
+├── <span class="dir">assets/</span><br>
+│&nbsp;&nbsp; ├── <span class="dir">css/</span><br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── <span class="file">style.css</span> <span style="color:#666;">— ~790 líneas de CSS con paleta B2 Domus</span><br>
+│&nbsp;&nbsp; ├── <span class="dir">js/</span><br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span class="file">main.js</span> <span style="color:#666;">— GSAP: hero timeline, scroll reveal, counters, parallax</span><br>
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── <span class="file">misi.js</span> <span style="color:#666;">— Chatbot: toggle panel, llamada API, respuestas predefinidas</span><br>
+│&nbsp;&nbsp; └── <span class="dir">images/</span><br>
+│&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span class="file">logo.png</span> <span style="color:#666;">— Logo principal (PNG, 400×400, fondo transparente)</span><br>
+│&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span class="file">logo-sm.png</span> <span style="color:#666;">— Favicon (100×100)</span><br>
+│&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span class="file">logo-footer.jpg</span> <span style="color:#666;">— Logo para footer (300×300, original JPEG con fondo blanco)</span><br>
+│&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <span class="file">*.jpeg</span> <span style="color:#666;">— 6 imágenes de proyectos (añadir por el cliente)</span><br>
+│<br>
+└── <span class="dir">_fabian/</span><br>
+&nbsp;&nbsp; &nbsp; ├── <span class="file">inicio.txt</span> <span style="color:#666;">— Brief original del cliente con paleta y contenido</span><br>
+&nbsp;&nbsp; &nbsp; ├── <span class="file">bitacora.html</span> <span style="color:#666;">— ★ Este documento</span><br>
+&nbsp;&nbsp; &nbsp; ├── <span class="file">logo.jpeg</span> <span style="color:#666;">— Logo original del cliente (1536×1536)</span><br>
+&nbsp;&nbsp; &nbsp; ├── <span class="file">logo.pdf</span> <span style="color:#666;">— Documento de entrega (no es el logo)</span><br>
+&nbsp;&nbsp; &nbsp; └── <span class="file">*.jpeg</span> <span style="color:#666;">— 6 imágenes originales de proyectos</span><br>
+</div>
+
+<hr>
+
+<h2>4. Paleta de Colores (Branding)</h2>
+
+<table>
+    <tr><th>Nombre</th><th>HEX</th><th>RGB</th><th>Uso</th></tr>
+    <tr>
+        <td><span class="color-swatch" style="background:#DDBC6B;"></span> Dorado Arena</td>
+        <td><code>#DDBC6B</code></td>
+        <td>221, 188, 107</td>
+        <td>Color principal de marca, botones secundarios, detalles decorativos, hover</td>
+    </tr>
+    <tr>
+        <td><span class="color-swatch" style="background:#F5EEDC;"></span> Marfil Claro</td>
+        <td><code>#F5EEDC</code></td>
+        <td>245, 238, 220</td>
+        <td>Fondo general de la web, fondos de cards</td>
+    </tr>
+    <tr>
+        <td><span class="color-swatch" style="background:#1D372E;"></span> Verde Oscuro Profundo</td>
+        <td><code>#1D372E</code></td>
+        <td>29, 55, 46</td>
+        <td>Textos, encabezados, botones primarios, navbar, footer</td>
+    </tr>
+    <tr>
+        <td><span class="color-swatch" style="background:#3F5A4E;"></span> Verde Medio</td>
+        <td><code>#3F5A4E</code></td>
+        <td>63, 90, 78</td>
+        <td>Links, estados hover, complementario</td>
+    </tr>
+    <tr>
+        <td><span class="color-swatch" style="background:#E8E2D4;"></span> Gris Suave</td>
+        <td><code>#E8E2D4</code></td>
+        <td>232, 226, 212</td>
+        <td>Fondos secundarios, bordes suaves, placeholders</td>
+    </tr>
+</table>
+
+<hr>
+
+<h2>5. Contenido del Sitio (Texto)</h2>
+
+<h3>5.1 Inicio — Hero</h3>
+<pre>Badge: Mobiliario a Medida
+Título: Diseñamos el mobiliario que tu espacio merece
+Subtítulo: Diseño, fabricación e instalación de mobiliario a medida en Bogotá,
+          Funza y alrededores. Transformamos tus ideas en piezas únicas
+          con acabados premium.
+CTAs: "Cotiza por WhatsApp" | "Ver Proyectos"</pre>
+
+<h3>5.2 Servicios</h3>
+<table>
+    <tr><th>Servicio</th><th>Descripción</th><th>Icono FA</th></tr>
+    <tr><td>Cocinas Integrales</td><td>Diseño y fabricación de cocinas modulares con acabados premium</td><td><code>fa-kitchen-set</code></td></tr>
+    <tr><td>Closets y Vestieres</td><td>Armarios y vestidores personalizados con soluciones inteligentes</td><td><code>fa-shirt</code></td></tr>
+    <tr><td>Centros de Entretenimiento</td><td>Muebles modulares para salas, integración tecnología y confort</td><td><code>fa-tv</code></td></tr>
+    <tr><td>Muebles para Oficina</td><td>Mobiliario ejecutivo con ergonomía, diseño y durabilidad</td><td><code>fa-building</code></td></tr>
+    <tr><td>Diseño y Visualización 3D</td><td>Modelado y renderizado 3D fotorrealista</td><td><code>fa-cubes</code></td></tr>
+</table>
+
+<h3>5.3 Proceso de Trabajo</h3>
+<ol>
+    <li><strong>Visita y Toma de Medidas</strong> — Agendamos visita al espacio</li>
+    <li><strong>Diseño 3D</strong> — Modelo tridimensional fotorrealista</li>
+    <li><strong>Cotización</strong> — Presupuesto detallado sin compromiso</li>
+    <li><strong>Fabricación</strong> — Materiales premium, mano de obra especializada</li>
+    <li><strong>Instalación</strong> — Entrega e instalación con puntualidad</li>
+</ol>
+
+<h3>5.4 Nosotros</h3>
+<pre>En B2 Domus, cada proyecto nace de la pasión por el diseño y la carpintería
+de alta calidad. Somos especialistas en mobiliario a medida con experiencia
+en diseño digital y visualización arquitectónica. Fabricación e instalación
+propia garantizan calidad y cumplimiento.</pre>
+
+<h3>5.5 Contacto</h3>
+<pre>WhatsApp: 317 553 1220
+Email: contacto@b2domus.com
+Cobertura: Bogotá, Funza y alrededores
+Horario: Lun - Sáb 8:00 AM - 6:00 PM</pre>
+
+<hr>
+
+<h2>6. Arquitectura Técnica</h2>
+
+<h3>6.1 Sistema de Includes PHP</h3>
+<p>Todas las páginas siguen el mismo patrón:</p>
+<pre>&lt;?php
+define('PAGE_TITLE', 'Nombre');
+require_once 'includes/config.php';   // Constantes globales
+require_once 'includes/header.php';   // &lt;head&gt; + navbar
+?&gt;
+&lt;!-- Contenido específico de la página --&gt;
+&lt;?php require_once 'includes/footer.php'; ?&gt;  // Footer + scripts</pre>
+
+<h3>6.2 Navbar con Scroll State</h3>
+<p>GSAP detecta el scroll y aplica la clase <code>.navbar-scrolled</code> al nav.</p>
+<pre>gsap.to(nav, {
+    scrollTrigger: {
+        trigger: 'body',
+        start: '80px top',
+        toggleClass: { targets: nav, className: 'navbar-scrolled' }
+    }
+});</pre>
+<p><strong>Estados CSS:</strong></p>
+<ul>
+    <li><strong>Transparente:</strong> <code>background: linear-gradient(to bottom, rgba(29,55,46,0.85), transparent)</code> — Logo y nav-links en blanco</li>
+    <li><strong>Scrolled:</strong> <code>background: rgba(245,238,220,0.97)</code> con blur — Logo original, nav-links en verde oscuro</li>
+</ul>
+
+<h3>6.3 Animaciones GSAP</h3>
+<table>
+    <tr><th>Animación</th><th>Técnica</th><th>Elementos</th></tr>
+    <tr><td>Hero reveal</td><td>Timeline secuencial: badge → título → texto → CTAs</td><td><code>.hero-badge</code>, <code>h1</code>, <code>p</code>, <code>.hero-cta</code></td></tr>
+    <tr><td>Hero parallax</td><td>ScrollTrigger scrub — escala 1→1.1</td><td><code>.hero-bg img</code></td></tr>
+    <tr><td>Scroll reveal</td><td><code>gsap.from()</code> con ScrollTrigger, y:60, opacity:0</td><td>Todos los <code>.reveal</code></td></tr>
+    <tr><td>Service cards</td><td>Stagger con delay incremental (0.15s)</td><td><code>.service-card</code></td></tr>
+    <tr><td>Counters</td><td><code>gsap.to()</code> con objeto proxy, onUpdate escribe el valor</td><td><code>.stat-number</code> (data-target)</td></tr>
+    <tr><td>Process steps</td><td>Revelación secuencial desde la izquierda</td><td><code>.process-step</code></td></tr>
+    <tr><td>Portfolio items</td><td>Stagger con fade-up</td><td><code>.portfolio-item</code></td></tr>
+</table>
+
+<h3>6.4 Chatbot Misi</h3>
+<p>Botón flotante dorado en la esquina inferior derecha (encima del WhatsApp float).</p>
+
+<p><strong>Flujo:</strong></p>
+<ol>
+    <li>Usuario escribe mensaje o selecciona sugerencia rápida</li>
+    <li>JS envía POST a <code>api/misi.php</code> con <code>{ message: "..." }</code></li>
+    <li><code>misi.php</code> intenta consultar OpenAI API (si configurada)</li>
+    <li>Si no hay API key o falla → JS usa respuestas predefinidas por keywords</li>
+</ol>
+
+<p><strong>Respuestas predefinidas (fallback) — 7 categorías:</strong></p>
+<table>
+    <tr><th>Keywords</th><th>Respuesta</th></tr>
+    <tr><td>hola, buenas, hey, misi</td><td>Saludo de bienvenida</td></tr>
+    <tr><td>servicio, cocina, closet, mueble</td><td>Lista de 5 servicios + invitación a cotizar</td></tr>
+    <tr><td>cotización, precio, cuánto</td><td>Derivar a WhatsApp 317 553 1220</td></tr>
+    <tr><td>proceso, pasos, fabricación</td><td>Explicación del proceso 5 pasos</td></tr>
+    <tr><td>contacto, teléfono, whatsapp</td><td>Datos de contacto</td></tr>
+    <tr><td>nosotros, quienes, historia</td><td>Historia de B2 Domus</td></tr>
+    <tr><td>gracias, ok, perfecto</td><td>Agradecimiento + oferta de ayuda adicional</td></tr>
+</table>
+
+<p><strong>Configuración API (opcional):</strong></p>
+<pre>// En includes/config.php:
+define('OPENAI_API_KEY', 'sk-proj-...');  // Tu API key de OpenAI
+define('OPENAI_MODEL', 'gpt-4o-mini');    // Modelo</pre>
+
+<h3>6.5 Formulario de Contacto</h3>
+<ul>
+    <li>Método POST a sí mismo (<code>contacto.php</code>)</li>
+    <li>Validación: nombre, email (formato) y mensaje obligatorios</li>
+    <li>Envío vía <code>mail()</code> de PHP a <code>contacto@b2domus.com</code></li>
+    <li>Éxito: muestra mensaje de confirmación</li>
+    <li>Error: muestra alerta con el problema</li>
+</ul>
+
+<hr>
+
+<h2>7. Manejo de Imágenes</h2>
+
+<table>
+    <tr><th>Archivo</th><th>Dimensiones</th><th>Formato</th><th>Ubicación en la web</th></tr>
+    <tr><td>logo.png</td><td>400×400</td><td>PNG (transparente)</td><td>Navbar, todas las páginas</td></tr>
+    <tr><td>logo-sm.png</td><td>100×100</td><td>PNG</td><td>Favicon (icono de pestaña)</td></tr>
+    <tr><td>logo-footer.jpg</td><td>300×300</td><td>JPEG</td><td>Footer (con fondo blanco tipo badge)</td></tr>
+    <tr><td>cef04f97...jpeg</td><td>1600×914</td><td>JPEG</td><td><strong>[placeholder]</strong> Hero background (index.php)</td></tr>
+    <tr><td>da1fd195...jpeg</td><td>1600×666</td><td>JPEG</td><td><strong>[placeholder]</strong> Banner parallax (opcional)</td></tr>
+    <tr><td>13a5f0a6...jpeg</td><td>1054×1492</td><td>JPEG</td><td><strong>[placeholder]</strong> Nosotros / feature project</td></tr>
+    <tr><td>a5532d53...jpeg</td><td>1426×1103</td><td>JPEG</td><td><strong>[placeholder]</strong> Servicios / proceso</td></tr>
+    <tr><td>5665e2d7...jpeg</td><td>1536×1536</td><td>JPEG</td><td><strong>[placeholder]</strong> Portafolio grid</td></tr>
+    <tr><td>ddd7600a...jpeg</td><td>1254×1254</td><td>JPEG</td><td><strong>[placeholder]</strong> Portafolio grid</td></tr>
+</table>
+
+<p><em>Nota: Los 6 JPEG de proyectos fueron retirados de <code>assets/images/</code> para que el cliente los organice. En su lugar hay divs <code>.img-placeholder</code> con el <code>data-label</code> correspondiente.</em></p>
+
+<hr>
+
+<h2>8. Estructura de una Página Tipo</h2>
+
+<p>Todas las páginas siguen esta plantilla:</p>
+
+<pre>&lt;?php
+define('PAGE_TITLE', 'Nombre');
+require_once 'includes/config.php';
+require_once 'includes/header.php';
+?&gt;
+
+&lt;section class="page-header"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-lg-8 reveal"&gt;
+                &lt;span class="hero-badge"&gt;&lt;i class="fas fa-icon"&gt;&lt;/i&gt; Badge&lt;/span&gt;
+                &lt;h1&gt;Título&lt;/h1&gt;
+                &lt;p&gt;Descripción&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="section"&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- Contenido con clase "reveal" para animación GSAP --&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;?php require_once 'includes/footer.php'; ?&gt;</pre>
+
+<hr>
+
+<h2>9. Variables de Configuración</h2>
+
+<p>Todas las constantes editables están en <code>includes/config.php</code>:</p>
+
+<table>
+    <tr><th>Constante</th><th>Valor por defecto</th><th>Descripción</th></tr>
+    <tr><td><code>SITE_NAME</code></td><td>B2 Domus</td><td>Nombre del sitio</td></tr>
+    <tr><td><code>SITE_DESC</code></td><td>Diseño, fabricación e instalación de mobiliario a medida</td><td>Meta description</td></tr>
+    <tr><td><code>WHATSAPP_NUM</code></td><td>573175531220</td><td>Número WhatsApp (código país + número)</td></tr>
+    <tr><td><code>WHATSAPP_MSG</code></td><td>Hola%20B2%20Domus...</td><td>Mensaje predefinido para WhatsApp</td></tr>
+    <tr><td><code>EMAIL_CONTACT</code></td><td>contacto@b2domus.com</td><td>Correo para formulario</td></tr>
+    <tr><td><code>INSTAGRAM_URL</code></td><td>https://instagram.com/b2domus</td><td>URL de Instagram</td></tr>
+    <tr><td><code>FACEBOOK_URL</code></td><td>https://facebook.com/b2domus</td><td>URL de Facebook</td></tr>
+    <tr><td><code>COVERAGE</code></td><td>Bogotá, Funza y alrededores</td><td>Zona de cobertura</td></tr>
+    <tr><td><code>OPENAI_API_KEY</code></td><td>'' (vacío)</td><td>API key para Misi IA (dejar vacío = fallback)</td></tr>
+    <tr><td><code>OPENAI_MODEL</code></td><td>gpt-4o-mini</td><td>Modelo OpenAI</td></tr>
+</table>
+
+<hr>
+
+<h2>10. Componentes CSS Clave</h2>
+
+<table>
+    <tr><th>Componente</th><th>Líneas (aprox)</th><th>Descripción</th></tr>
+    <tr><td>Navbar (<code>#mainNav</code>)</td><td>60</td><td>Sticky, transparente→sólido, logo, links, toggler, CTA</td></tr>
+    <tr><td>Botones</td><td>50</td><td><code>.btn-primary</code>, <code>.btn-gold</code>, <code>.btn-outline-custom</code></td></tr>
+    <tr><td>Hero</td><td>45</td><td>Full-screen con overlay, badge, título, CTAs</td></tr>
+    <tr><td>Service Card</td><td>40</td><td>Card con hover effect, gold top border reveal</td></tr>
+    <tr><td>Portfolio</td><td>30</td><td>Grid masonry, overlay con info, hover zoom</td></tr>
+    <tr><td>Process Timeline</td><td>35</td><td>Línea vertical con números dorados, cards</td></tr>
+    <tr><td>Misi Chat</td><td>80</td><td>Panel flotante, header, body, footer, sugerencias</td></tr>
+    <tr><td>Footer</td><td>45</td><td>4 columnas, links, contacto, redes, copyright</td></tr>
+    <tr><td>Responsive</td><td>30</td><td>Media queries para tablet y mobile</td></tr>
+</table>
+
+<hr>
+
+<h2>11. Dependencias Externas (CDN)</h2>
+
+<table>
+    <tr><th>Recurso</th><th>URL</th></tr>
+    <tr><td>Bootstrap CSS</td><td><code>https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css</code></td></tr>
+    <tr><td>Bootstrap JS</td><td><code>https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js</code></td></tr>
+    <tr><td>Font Awesome</td><td><code>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css</code></td></tr>
+    <tr><td>Google Fonts (Inter)</td><td><code>https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap</code></td></tr>
+    <tr><td>GSAP</td><td><code>https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js</code></td></tr>
+    <tr><td>GSAP ScrollTrigger</td><td><code>https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js</code></td></tr>
+</table>
+
+<hr>
+
+<h2>12. Próximos Pasos / Tareas Pendientes</h2>
+
+<ul>
+    <li><strong>Agregar imágenes</strong> — Colocar los 6 JPEG de proyectos en <code>assets/images/</code> y reemplazar los divs <code>.img-placeholder</code> por <code>&lt;img&gt;</code> en los archivos PHP</li>
+    <li><strong>Configurar OpenAI</strong> — Agregar API key en <code>includes/config.php</code> para activar respuestas IA de Misi</li>
+    <li><strong>Configurar email</strong> — Verificar que <code>mail()</code> de PHP funciona en el servidor</li>
+    <li><strong>Mapa de cobertura</strong> — Integrar Google Maps embed en contacto.php</li>
+    <li><strong>SEO</strong> — Agregar meta tags OG, Google Analytics, y optimizar lazy loading</li>
+    <li><strong>Hosting</strong> — Subir a producción (actualmente en XAMPP local)</li>
+</ul>
+
+<hr>
+
+<p style="text-align:center; opacity:0.5;">Fin de la bitácora técnica — B2 Domus © 2026</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+hola mundo 
+
+
+Estructura ideal para la web de B2 Domus
+Inicio
+Foto principal de un proyecto terminado.
+Frase:
+Diseño, fabricación e instalación de mobiliario a medida en Bogotá, Funza y alrededores.
+Botón de WhatsApp.
+Servicios
+Cocinas integrales.
+Closets y vestieres.
+Centros de entretenimiento.
+Muebles para oficina.
+Diseño y visualización 3D.
+Portafolio
+Galería con:
+Foto final.
+Descripción breve.
+Materiales utilizados.
+Ubicación del proyecto.
+Proceso de trabajo
+Visita y toma de medidas.
+Diseño 3D.
+Cotización.
+Fabricación.
+Instalación.
+Nosotros
+Cuenta tu historia:
+Diseñador de mobiliario.
+Experiencia en diseño digital y visualización arquitectónica.
+Fabricación e instalación propia.
+Contacto
+WhatsApp: 317 553 1220.
+Formulario.
+Redes sociales.
+Mapa de cobertura.
+
+
+
+Paleta principal B2 Domus
+Color
+HEX
+RGB
+Dorado arena
+#DDBC6B
+221, 188, 107
+Marfil claro
+#F5EEDC
+245, 238, 220
+Verde oscuro profundo
+#1D372E
+29, 55, 46
+Vista previa
+🟨 #DDBC6B → Color principal de marca
+⬜ #F5EEDC → Fondos claros
+🟩 #1D372E → Textos y elementos destacados
+Cómo los usaría en la web
+Fondo general: #F5EEDC
+Encabezados: #1D372E
+Botones principales: #1D372E con texto blanco
+Botones secundarios: #DDBC6B con texto #1D372E
+Detalles decorativos: #DDBC6B
+Estilo recomendado
+Tu logo tiene una estética:
+Moderna
+Minimalista
+Arquitectónica
+Premium
+Por eso evitaría colores muy brillantes o saturados. Mantendría la web con mucho espacio en blanco, fotografías de proyectos grandes y líneas limpias.
+Además te sugeriría añadir un color complementario para estados y enlaces:
+Verde medio: #3F5A4E
+Gris suave: #E8E2D4
