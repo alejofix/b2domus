@@ -59,7 +59,7 @@ require_once 'includes/header.php';
         <div class="portfolio-grid mt-4">
             <?php foreach (array_slice($portfolio_items, 0, 4) as $item): ?>
             <div class="portfolio-item">
-                <div class="img-placeholder portfolio-placeholder" data-label="<?php echo $item['title']; ?>"></div>
+                <img src="<?php echo $item['img']; ?>" alt="<?php echo $item['title']; ?>">
                 <div class="portfolio-overlay">
                     <h5><?php echo $item['title']; ?></h5>
                     <p><i class="fas fa-map-marker-alt me-1"></i> <?php echo $item['location']; ?></p>
@@ -86,7 +86,7 @@ require_once 'includes/header.php';
             <div class="col-lg-6 offset-lg-1 mt-4 mt-lg-0">
                 <div class="process-timeline">
                     <?php foreach ($process_steps as $i => $step): ?>
-                    <div class="process-step reveal">
+                    <div class="process-step">
                         <div class="process-step-number"><?php echo $step['step']; ?></div>
                         <h4><?php echo $step['title']; ?></h4>
                         <p><?php echo $step['desc']; ?></p>

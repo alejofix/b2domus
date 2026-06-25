@@ -28,7 +28,7 @@ require_once 'includes/header.php';
         <div class="portfolio-grid">
             <?php foreach ($portfolio_items as $item): ?>
             <div class="portfolio-item">
-                <div class="img-placeholder portfolio-placeholder" data-label="<?php echo $item['title']; ?>"></div>
+                <img src="<?php echo $item['img']; ?>" alt="<?php echo $item['title']; ?>">
                 <div class="portfolio-overlay">
                     <h5><?php echo $item['title']; ?></h5>
                     <p><i class="fas fa-palette me-1"></i> <?php echo $item['materials']; ?></p>

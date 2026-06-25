@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
         gsap.from(step, {
             scrollTrigger: {
                 trigger: step,
-                start: 'top 85%',
+                start: 'top 88%',
                 toggleActions: 'play none none none'
             },
-            x: -50,
+            y: 40,
             opacity: 0,
-            duration: 0.8,
-            delay: i * 0.25,
+            duration: 0.7,
+            delay: i * 0.2,
             ease: 'power3.out'
         });
     });

@@ -22,14 +22,16 @@ require_once 'includes/header.php';
             <div class="col-lg-10">
                 <div class="process-timeline">
                     <?php foreach ($process_steps as $step): ?>
-                    <div class="process-step reveal">
+                    <div class="process-step">
                         <div class="process-step-number"><?php echo $step['step']; ?></div>
-                        <div class="card process-card" style="border: none; background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: 0 5px 30px rgba(29,55,46,0.05);">
+                        <div class="process-step-connector"></div>
+                        <div class="card process-card">
                             <div class="d-flex align-items-center gap-3 mb-2">
-                                <i class="fas <?php echo $step['icon']; ?>" style="font-size: 1.5rem; color: var(--gold);"></i>
+                                <i class="fas <?php echo $step['icon']; ?> step-icon"></i>
                                 <h4 class="mb-0"><?php echo $step['title']; ?></h4>
+                                <span class="step-duration ms-auto"><i class="far fa-clock me-1"></i><?php echo $step['duration']; ?></span>
                             </div>
-                            <p class="mb-0 text-muted" style="padding-left: 3rem;"><?php echo $step['desc']; ?></p>
+                            <p class="mb-0 step-desc"><?php echo $step['desc']; ?></p>
                         </div>
                     </div>
                     <?php endforeach; ?>

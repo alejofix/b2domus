@@ -37,7 +37,9 @@ require_once 'includes/header.php';
                 </div>
             </div>
             <div class="col-lg-5 <?php echo $index % 2 === 1 ? '' : 'offset-lg-1'; ?> mt-4 mt-lg-0 reveal">
-                <div class="about-image img-placeholder" data-label="<?php echo $s['title']; ?>"></div>
+                <div class="about-image">
+                    <img src="<?php echo $s['img']; ?>" alt="<?php echo $s['title']; ?>">
+                </div>
             </div>
         </div>
         <?php endforeach; ?>

@@ -42,7 +42,9 @@ require_once 'includes/header.php';
                 </div>
             </div>
             <div class="col-lg-5 offset-lg-1 mt-4 mt-lg-0 reveal">
-                <div class="about-image img-placeholder" data-label="B2 Domus - Proyecto"></div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/carpinteria/800/500" alt="B2 Domus - Proyecto">
+                </div>
             </div>
         </div>
     </div>
